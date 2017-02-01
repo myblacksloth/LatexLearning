@@ -1,0 +1,76 @@
+%
+% la struttura del file sorgente
+%
+% il file sorgente di Latex deve essere strutturato in maniera precisa
+%
+% primo elemento fondamentale
+% dichiarazione di classe
+% documentclas....
+%
+%dichiarazione di inizio e fine documento
+% begin e end
+%
+% le istruzioni tra documentclass e begin
+% sono il preambolo del documento
+% vengono caricati i pacchetti
+% vengono definiti i comandi e gli ambienti personalizzati
+% si definiscono le opzioni generali del documento
+%
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\title{doc3 \dots} % il comando dots mette 3 puntini di sospensione
+\author{Antonio Maulucci \and Antonio Maulucci} % il comando and divide i due nomi con uno spazio predefinito
+\date{February 2017}
+
+% inizio del documento
+\begin{document}
+
+%
+% il comando maketitle produce la stampa del titolo e degli autori e della data
+%
+\maketitle
+
+% il comando section produce un titolo di sezione
+\section{Il file sorgente di \LaTeX}
+
+\section{Spazi e righe vuote}
+
+Il carattere tabulatre viene visto come uno spazio
+
+Più spazi consecutivi costituiscono un solo spazio
+
+Una sola andata a capo è considerata come uno spazio
+
+Più righe vuote vengono trattate come una sola riga vuota
+
+\section{I commenti}
+
+I commenti su una riga possono essere inseriti mediante il carattere $\%$
+
+Mentre per inserire i commenti su più righe si utilizza un apposito ambiente denominato "comment"
+
+\subsection{Sottoparagrafo}
+
+Questo è un sottoparagrafo
+
+\begin{comment}
+
+questo
+è
+un
+commento
+su
+più righe
+
+\end{comment}
+
+% fine del documento
+\end{document}
+
+dopo la fine del documento
+il compilatore latex esclude tutto il contenuto e quindi si può scrivere ciò che si vuole
+... appunti e altro....
