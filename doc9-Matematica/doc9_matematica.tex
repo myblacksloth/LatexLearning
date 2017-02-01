@@ -1,0 +1,197 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\title{doc9 - La Matamatica con \LaTeX\ }
+\author{Antonio Maulucci}
+\date{February 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Una formula matematica}
+\subsection{Una semplice formula}
+
+\( x+y+3=17 \)
+
+\subsection{La stessa formula scritta matematicamente}
+
+$ x + y +3 = 17 $ % gli spazi non influiscono sull'output finale
+
+\subsection{Esito}
+
+Non cambia nulla ma la seconda opzione è quella preferibile!
+
+\subsection{Ambiente displayMath}
+
+
+Il seguente ambiente dispone la formula al centro della pagina permettendo di inserire questa indipendentemente dai caratteri \$:
+
+\begin{displaymath}
+x + y + 3 = 17
+% lasciando una linea bianca all'interno di questo ambiente il compilatore restituirà un errore
+\end{displaymath}
+
+\subsection{Ambiente math semplificato}
+
+Questo è un metodo per scrivere una formula semplificando l'utilizzo dell'ambiente math:
+
+\[ x+ y +3 = 17 \]
+
+Un'ulteriore semplificazione è:
+
+$$x + y +3 = 17$$
+
+
+
+
+\section{Indici ed esponenti}
+
+\subsection{Esponenti}
+
+Scrivere x al quadrato:
+
+$$ x^2 $$
+
+Esempio di formula:
+
+$$ (x^2 + x^3)^4 = 12 $$
+
+\subsection{Indici}
+
+$$ x_2 $$
+$$ x_3 $$
+
+\section{Testo in una formula}
+$$ f(x)> 0 \mbox{ è vero se } x=3 $$ % N.B.: lasciare uno spazio all'inizio e alla fine nelle parentesi graffe
+
+Se non si lascia lo spazio all'interno delle parentesi graffe accade:
+
+$$ f(x)>0 \mbox{è vero se} x=3$$
+
+\section{Lettere e simboli matematici}
+
+Consulare la guida \LaTeX (imparare latex) a pagina 39
+
+Alcuni esempi:
+
+$ \alpha\ \beta\ \gamma\ \delta\ \eta\ \theta\ \epsilon\\ \Pi\ \Theta\ \Delta\ $
+
+La costante matematica $\Pi$ vale $3,14...$
+
+\section{Operatori}
+
+$ \pm\ \mp\ \times\ \div\ \ast\ \star\ \bullet\ \cup\ \not\ \surd\ \nabla $
+
+guida pag. 40
+
+\section{Accenti}
+
+$
+\hat{a}\\
+\bar{x}\\
+\vec{y}\\
+\dot{a}\\
+\ddot{x}\\
+\overrightarrow{AB}
+$
+
+guida pag. 42/43
+
+\section{Frazioni}
+
+$
+\frac{(x^2+x^3)^4}{(x^6-x^3)^5}
+$
+
+\section{Radici}
+
+$
+\sqrt[9]{(x^6)^(x+3)}
+$
+
+\section{Delimitatori}
+
+\subsection{Matrici}
+
+$
+\left[
+\begin{array}{cc}
+    a_{11} & a_{12} \\ a_{23} & a_{24}
+\end{array}
+\right]
+$
+
+\subsection{Matrici con numeri}
+
+$
+\left[
+\begin{array}{ccc} %cc come per le tabelle indica l'allineamento di ogni colonna
+    12 & 27 & 24 \\ 22 & 34 & 78
+\end{array}
+\right]
+$
+
+\subsection{Sistema di equazioni}
+
+$
+|x| =
+\left\{
+\begin{array}{r}
+    x^2 = 3x + 2 \\
+    x^3 = 2x +4
+\end{array}
+\right.
+$
+
+\section{Simboli a grandezza variabile}
+
+\subsection{Sommatoria}
+
+$
+\sum_{i=0}^{+\infty} x_i
+$
+
+\subsection{Integrale}
+
+$
+\int x^2 dx = \frac{x^3}{3} + c
+$
+
+\subsubsection{Integrale definito}
+$
+\int_a^b x^2 dx
+$
+
+\subsubsection{Integrale circolare}
+$
+\oint x^2
+$
+
+\subsubsection{Integrale triplo}
+$ \int \!\!\!\! \int \!\!\!\! \int x^2 dx $
+
+
+\section{Limitii}
+
+$
+\lim_{x \rightarrow +\infty} (x^2+3x)
+$
+
+\section{Limite di logaritmo}
+
+$$
+\lim_{x \rightarrow +\infty} \ln x^2 = +\infty
+$$
+
+\section{Le tabelle e l'ambiente Array}
+
+
+
+\vspace{6cm}
+\begin{center}
+\copyright Antonio Maulucci 2017
+\end{center}
+\end{document}
