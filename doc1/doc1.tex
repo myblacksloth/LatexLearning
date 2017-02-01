@@ -1,0 +1,48 @@
+\documentclass{article}
+% il comando inputenc serve ad interpretare correttamente i caratteri immessi nell'editor
+% utf-8 è la codifica di input
+\usepackage[utf8]{inputenc}
+% impostare la codifica dei caratteri
+% poiché latex è stato inventato per scrivere in inglese bisogna importare i caratteri di codifica occidentali
+%per fare ciò bisogna importare (usare) un package
+\usepackage[T1]{fontenc}
+% il comando precedente usa la codifica t1
+% e dice al compilatore mediante fontenc (font encoding) di codificare i caratteri in tale codifica
+% per scrivere ò senza questa codifica si sarebbe dovuto scrivere \'o
+
+%l'ultimo pacchetto da utilizzare è quello della codifica delle parole e del riconoscimento delle lingue = babel
+%importiamo la linguea italiana
+\usepackage[italian]{babel}
+
+\title{Documento 1}
+\author{Antonio Maulucci http://www.antomau.com}
+\date{February 2017}
+
+\begin{document}
+
+\maketitle
+
+% questo è un commento
+% (C) Antonio Maulucci 2017
+% http://www.antomau.com
+% il carattere '\' serve ad inizializzare un comando
+
+%l'estensione dei documenti latex è .tex
+
+
+\section{Introduction}
+\section{Sapessi}
+\section{califragilisti}
+
+The logo of Latex is: \LaTeX
+
+
+%vediamo coem scrivere solo un piccolo pezzo di testo in lingua straniera
+\foreignlanguage{english}{Hello!}
+
+%per porizioni più lunghe di codice in altra lingua
+\begin{otherlanguage*}{english}
+Hello, my name is Antony and I'm writing using \LaTeX language!
+\end{otherlanguage*}
+
+\end{document}
