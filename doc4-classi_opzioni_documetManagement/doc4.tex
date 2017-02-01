@@ -1,0 +1,68 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\title{doc4}
+\author{Antonio Maulucci \and Antonio Maulucci}
+\date{\dots February 2017}
+
+
+\begin{document}
+
+\maketitle
+
+\backslash documentclass $[$ opzioni $] \{$ classe $\}$
+
+\section{Le classi di documento}
+
+
+ARTICLE: per scrivere articoli
+
+BOOK: per scrivere libri
+
+LETTER: per scrivere lettere
+
+ci sono altre classi extra
+
+\section{Le opzioni di documento}
+
+10pt, 11pt, 12pt = impostano la dimensione del font principale
+
+a4paper, a5paper... = definiscono la dimensione del foglio (la dimensione predefinita è letterpaper)
+
+onside, twoside = documento a singola o doppia facciata
+
+PER ALTRE VOCI CONSULTARE IL MANUALE A PAGINA 26
+
+Si possono usare più opzioni contemporaneamente seprando i var valori mediante la ','
+
+\section{La gestione del documento}
+
+\subsection{I margini}
+
+Per la gestione dei margini si deve usare il package "geometry"
+
+Creiamo un documento che ha
+
+formato a4
+
+marigini superiori e inferiori di 3cm
+
+sinistro e destro di 3.5 cm
+
+destinare alla rilegatura 5 mm
+
+\backslash geometry $\{$ a4paper,top=3cm,bottom=3cm,left=3.5cm,right=3.5cm,heightrounded,bindingoffset=5mm $\}$
+
+\subsection{Interlinea}
+
+\backslash singlespacing = 1 scartamento
+
+\backslash onehalfspacing = 1.5 scartamento
+
+\backslash doublespacing = 2 scartamento
+
+\backslash linespread $\{$ x $\}$ = x * fattore di scala del documento
+
+\end{document}
