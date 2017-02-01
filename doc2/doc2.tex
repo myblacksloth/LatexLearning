@@ -1,0 +1,85 @@
+\documentclass[a4]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\title{doc2}
+\author{Antonio Maulucci}
+\date{February 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{I caratteri speciali}
+
+I seguenti caratteri sono ritenuti caratteri speciali, essi hanno bisogno di essere terminati mediante l'utilizzo di uno spazio o della barra rovescia
+
+\LaTeX\ Logo latex
+
+\TeX\ logo tex
+
+\LaTeX  logo latex seguito da due spazi
+
+%
+% COMANDI PER LE SEZIONI DI TESTO
+% I comandi del tipo \XX{argomento}
+% formattano solo il testo tra parentesi graffe
+% seguendo le istruzioni dichiarate
+% es.: il testo "argomento" viene trattato usando le istruzioni XX
+%
+\section{Dichiarazione di una sezione}
+Questa è una sezione di testo di "Dichiarazione..."
+
+%
+% LE DICHIARAZIONI
+% Una dichiarazione inizia con il carattere '\'
+% es.: \itshape
+% una dichiarazione delimita un testo che deve seguire le regole specificate
+% una dichiarazione si annulla solamente con un'altra dichiarazione
+%
+
+%
+% I CARATTERI SPECIALI DI LATEX
+%
+\section{I caratteri speciali}
+
+Il carattere back slash comincia un comando
+
+I caratteri parentesi graffe delimitano un gruppo
+
+Il carattere dollaro delimita una formula matematica in linea
+
+Il carattere esponente delimita un esponente matematico
+
+Vi sono anche altri caratteri... cosultare la guida
+
+Il back slash si realizza con \textbackslash
+
+e la parentesi graffa con $\{$
+
+\section{Gli ambienti}
+
+Un ambiente è una porzione di codice delimitata da un comando di apertura e uno di chiusura
+
+\textbackslash begin $\{$ ambiente $\} [ ] \{ \}$
+
+...
+
+\textbackslash end
+
+dove "ambiente" è il nome dell'ambiente
+
+Gli ambienti possono essere annidati
+
+\textbackslash begin$\{$ ambiente esterno $\}$
+
+\textbackslash begin$\{$ ambiente interno $\}$
+
+\textbackslash end $\{$ ambiente interno $\}$
+
+\textbackslash end $\{$ ambiente esterno $\}$
+
+
+
+\end{document}
