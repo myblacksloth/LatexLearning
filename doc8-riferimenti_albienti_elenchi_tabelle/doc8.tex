@@ -1,0 +1,262 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\title{doc8}
+\author{Antonio Maulucci}
+\date{February 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{I riferimenti}
+% quando si inserisce una sezione si può anche inserire una label (etichetta) che la identifica
+\label{etichtta} %label non di riferimento
+\label{sez:refEtichetta} % label di riferimento
+
+Nella prossima sezione vedremo come si usano i riferimenti
+
+\section{Utilizzare i riferimenti}
+
+Voglio fare riferimento alla sezione 1 quindi uso \backslash ref\{etichetta\} ??
+
+ASSOLUTAMENTE NO PERCHEÉ LABEL NON E' UNA LABEL DI RIFERIMENTO
+
+ALLORA DEVO PRIMA RICHIARARE UNA LABEL DI RIFERIMENTO PER POTER UTILIZZARE QUESTA FUNZIONE
+
+Adesso posso fare riferimento alla sezione 1 in questo modo: riferimento a \ref{sez:refEtichetta}
+
+% adesso intendo stampare la pagina in cui si trova il riferimento
+che si trova nella pagina \pageref{sez:refEtichetta}
+
+\newpage
+
+\section{Gli ambienti di \LaTeX}
+
+\subsection{ambiente em}
+
+Questo ambiente mette il testo in evidenza
+
+\begin{em}
+Ecco un esempio!
+\end{em}
+
+\subsection{ambiente quotation}
+
+Inserisce un rientro all'inizio di ogni paragrafo e dona al testo una spaziatura normale
+
+\begin{quotation}
+esempio riga 1!
+
+esempio riga 2... questo testo viene scritto affinché occupi due righe per dimosrare come viene stampato
+\end{quotation}
+
+\subsection{ambiente quote}
+
+Non inserisce un rientro all'inizio di ogni paragrafo e ha una spaziatura leggermente maggire
+
+\begin{quote}
+esempio riga 1!
+
+esempio riga 2... questo testo viene scritto affinché occupi due righe per dimosrare come viene stampato
+\end{quote}
+
+\subsection{ambiente verse}
+
+Usa una spaziatura alla pari dell'ambiente
+\begin{em}
+quote
+\end{em}
+ma le linee per andare a capo devono terminare con $\backslash \backslash$ tranne l'ultima riga di ogni strofa.
+
+Le strofe sono separate da linee bianche
+
+\begin{verse}
+Cantami o diva, \\
+del Pelide Achille \\
+l'ira funesta.
+
+Strofa nuvova.
+\end{verse}
+
+\subsection{Ambiente center}
+
+Serve a centrare il testo in modo automatico
+
+\begin{center}
+Cantami o diva,
+
+del pelide Achille....
+
+Questo è un paragrafo nettamente centrato all'interno della corrente pagina scritta con \LaTeX
+\end{center}
+
+\newpage
+
+\subsection{ambiente FlushLeft}
+
+Questo ambiente effettua automaticamente l'impaginazione
+
+\begin{flushleft}
+paragrafo giustificato a sinistra in cui l'impaginazione avviene automaticamente come anche l'andata a caporigo
+\end{flushleft}
+
+\subsection{ambiente flushright}
+
+\begin{flushright}
+sto provando adesso l'ambiente flushright del linguaggio \LaTeX per vedere come viene impaginato il testo
+\end{flushright}
+
+\subsection{ambiente verbatim}
+
+\begin{verbatim}
+Questo ambiente non fa nulla e si comporta come \texttt
+
+non interpreta neanche i caratteri speciali come \ che può essere scritto
+
+tranquillamente senza utilizzare il comando \backslash
+
+tutti i comandi in questa sezione sono nulli --> ad esempio \newline \newpage
+
+tuttavia bisogna andare a capo manualmente altrimenti accade questo @@@@@@@@@@@
+
+ovvero si esce dai margini della pagina
+\end{verbatim}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+\section{Gli elenchi}
+
+\subsection{Lista semplice: elenco puntato}
+
+\begin{itemize}
+\item primo elemento
+\item secondo elemento
+\item terzo elemento
+\end{itemize}
+
+\subsection{Elenco numerato}
+
+\begin{enumerate}
+    \item primo elemento
+    \item secondo elemento
+    \item terzo elemento
+\end{enumerate}
+
+\subsection{Elenco di descrizioni}
+
+\begin{description}
+    \item[itemize] crea un elenco puntato
+    \item[enumerate] crea un elenco numerato
+    \item[descriprion] permette di descrivere degli elementi
+\end{description}
+
+\subsection{Le tabulazioni}
+
+Consultare il manuale 2 a pagina 31
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Le Tabelle}
+
+Quello delle tabelle è l'ambiente più potente di \LaTeX\ e si possono realizzare tutti i tipi di tabella
+
+\subsection{allineamento delle colonne}
+
+L : left\\
+C : center\\
+R : tight\\
+
+\subsection{Tabella semplice (lcr)}
+
+\begin{tabular}{lcr}
+r1:c1 & r1:c2 & r1:c3 \\
+r2:c1 & r2:c2 & r2:c3\\
+r3:c1 & r3:c2 & r3:c3
+\end{tabular}
+
+\subsection{Tabella con il bordo (l|c|r)}
+
+\begin{tabular}{l|c|r}
+r1:c1 & r1:c2 & r1:c3\\
+r2:c1 & r2:c2 & r2:c3
+\end{tabular}
+
+\subsection{Tabella con il bordo anche ai margini (|l|c|r|)}
+
+\begin{tabular}{|l|c|r|}
+r1:c1 & r1:c2 & r1:c3\\
+r2:c1 & r2:c2 & r2:c3
+\end{tabular}
+
+\subsection{Tabella con il bordo per ogni casella (|l|c|r|)}
+% | indica riga verticale
+% \hline indica riga orizzontale
+% & indica colonna successiva
+% \\ indica riga successiva
+\begin{tabular}{|l|c|r|}
+\hline
+r1:c1 & r1:c2 & r1:c3\\
+\hline
+r2:c1 & r2:c2 & r2:c3\\
+\hline
+r3:c1 & r3:c2 & r3:c3\\ %ometeendo l'andata a capo non uscirà la riga inferiore della tabella
+\hline
+\end{tabular}
+
+\subsection{Una tabella particolare}
+% questa è una tabella particolare
+%
+%il bordo sinistro ha una doppia rigatura
+% p{Xcm} indica che tale colonna deve essere larga X centimetri
+%doppia colonna al centro
+% *{2}{c|}|} indica che che la dichiarazione "c|" deve essere seguita per 2 volte
+% ovvero c| sarà applicata alle due colonne successive
+% inserendo | si sommerà a quella della precedente colonna e quindi vi saranno due linee verticali
+\begin{tabular}{||p{5cm}||*{2}{c|}|{r}||}
+\hline
+&  quantità & prezzo & disponibilità\\ %colonna di sinistra vuota per la prima riga
+\hline
+\bfseries smN9005 & 3 & 550 & NO\\
+\hline
+\bfseries smG935f & 1 & 829 & OK\\
+\hline
+\end{tabular}
+
+\subsection{Table e Figure}
+
+pagina 35 guida \LaTeX\ (imparare Latex)
+
+
+
+
+
+
+\begin{center}
+\copyright Antonio Maulucci 2017
+\end{center}
+\end{document}
