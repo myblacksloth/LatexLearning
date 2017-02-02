@@ -1,0 +1,178 @@
+\documentclass[a4paper, 11p]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\geometry{a4paper,top=1cm,bottom=2cm,left=1.5cm,right=1cm,bindingoffset=5mm}
+
+\usepackage[colorlinks]{hyperref} % per ottenere i collegamente interni ed esterni alla pagina colorati
+
+\usepackage{color} % per usare i colori
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=cyan} % per impostare il colore dei link
+% linkcolor è riferito ai collegamenti interni alla pagina
+% urlcolor è riferito ai collegamenti esterni e alle mail
+%
+% consultare questa pagina per comprenderne il funzionamento
+% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Customization
+%
+
+
+
+\usepackage{graphicx} % per utilizzare le immagini
+
+
+
+
+\usepackage{tgbonum} %cambiare font all'intero documento
+
+
+
+
+\title{{\color{red} doc11}}
+\author{Antonio Maulucci\\ \href{http://www.antomau.com}{antomau.com}}
+\date{February 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Testo colorato}
+
+\LaTeX\ permette di colorare il testo
+
+\subsection{Importare il package}
+
+Per poter scrivere a colori occorre importare il package color
+
+\begin{verbatim}
+    \usepackage{color}
+\end{verbatim}
+
+\subsection{Testo Rosso}
+
+Per scrivere un testo in colore
+{\color{red}rosso}
+occorre una sintassi particolare che è:
+
+\begin{verbatim}
+    { \color{NomeColore} testoColorato}
+\end{verbatim}
+
+in questo caso particolare abbiamo usato
+
+\begin{verbatim}
+    {\color{red}rosso}
+\end{verbatim}
+
+
+
+\subsection{Testo blu}
+
+{\color{blue}Questo testo è scritto in blu}
+
+\subsection{Testo verde}
+
+{\color{green}Questo testo è scritto in verde}
+
+\subsection{Quali colori posso usare?}
+
+Per comprendere quali colori è possibile usare consulare la pagina:
+\url{https://en.wikibooks.org/wiki/LaTeX/Colors}
+
+
+
+\vspace{2cm}
+
+\section{Link colorati}
+
+\LaTeX\ permette di colorare i Link
+
+\subsection{Importare il package per i link}
+
+Come abbiamo visto nella sezione precedente per poter utilizzare i link in \LaTeX\ dobbiamo importare il relativo package ovvero \textbf{hyperref}
+
+\subsection{Utilizzo di hyperref}
+
+Dopo aver importato il suddetto package dobbiamo impostare il colore dei link in questo modo:
+
+\begin{verbatim}
+    \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+\end{verbatim}
+
+ovviamente dobbiamo aver importato il package \textit{color}.
+
+
+\vspace{1cm}
+
+
+\section{Usare un font diverso}
+
+{\fontfamily{qbk}\selectfont
+This text uses a different font typeface
+}
+\\\\
+{\fontfamily{lmtt}\selectfont
+This text uses a different font typeface
+}
+\\\\
+{\fontfamily{qag}\selectfont
+This text uses a different font typeface
+}
+\\\\
+This text uses the basic font
+
+
+\subsection{Quali font posso usare?}
+
+Per vedere quali font si possono usare nell'editor \href{http://www.it.sharelatex.com}{Sharelatex} consultare
+
+{\fontfamily{qag}\selectfont
+\href{https://it.sharelatex.com/learn/Font_typefaces}{questa pagina}
+}
+
+
+
+\subsection{Come si usano?}
+
+Si usano in questo modo:
+\begin{verbatim}
+    {\fontfamily{NOME_FAMILY}\selectfont
+    TESTO FORMATTATO DIVERSAMENTE
+    }
+\end{verbatim}
+
+
+\subsection{Posso usare un
+{\fontfamily{qcs}\selectfont
+font
+} %end of font
+esterno?
+}
+
+Non con \LaTeX\ ma con X\LaTeX\ .
+
+
+
+\vspace{1cm}
+
+\section{Impostare un font generale per la pgina}
+Occorre utilizzare il seguente comando:
+\begin{verbatim}
+    \usepackage{Font_package_name}
+\end{verbatim}
+
+ad esempio questa pagina contiene la dichiarazione:
+
+\begin{verbatim}
+    \usepackage{tgbonum}
+\end{verbatim}
+
+
+\vspace{4cm}
+\begin{center}
+{\fontfamily{qag}\selectfont
+\copyright \sffamily{Antonio Maulucci 2017}
+}
+\end{center}
+\end{document}
