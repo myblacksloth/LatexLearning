@@ -1,0 +1,280 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{geometry}
+\geometry{a4paper,top=2cm,bottom=2cm,left=1.5cm,right=1cm,bindingoffset=5mm}
+
+\usepackage[colorlinks]{hyperref} % per ottenere i collegamente interni ed esterni alla pagina colorati
+
+\usepackage{color} % per usare i colori
+
+
+\usepackage[dvipsnames]{xcolor} % per usare i colori secondari
+
+
+
+\hypersetup{colorlinks=true, linkcolor=darkgray, urlcolor=RedOrange} % per impostare il colore dei link
+% linkcolor è riferito ai collegamenti interni alla pagina
+% urlcolor è riferito ai collegamenti esterni e alle mail
+%
+% consultare questa pagina per comprenderne il funzionamento
+% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Customization
+%
+
+
+
+\usepackage{graphicx} % per utilizzare le immagini
+
+
+\usepackage{tgpagella} %cambiare font all'intero documento
+
+
+
+\usepackage{lastpage} %per poter ottenere il numero dell'ultima pagina del documento
+
+\usepackage{fancyhdr} % per utilizzare gli header personalizzati
+\pagestyle{fancy}
+\rhead{Made with \LaTeX\ } %header pesonalizzato a destra
+\lhead{made by Antonio Maulucci} % header personalizzato a sinistra
+\rfoot{This is the page \thepage\ of \pageref{LastPage}} %footer personalizzato a destra
+% il comando \thepage stampa il numero della pagina corrente
+\lfoot{Feb 2017} %footer sinistro
+
+
+
+
+\pagenumbering{roman} %numerazione romana delle pagine
+
+
+
+\title{{\color{red} doc12}}
+\author{Antonio Maulucci\\ \href{http://www.antomau.com}{antomau.com}}
+\date{February 2017}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents % questo comando crea l'indice dei contenuti del documento
+
+\newpage
+
+\section{Indice del documento}
+
+Per creare un indice per il documento occorre utilizzare il comando
+
+\begin{verbatim}
+    \tableofcontents
+\end{verbatim}
+
+\section{Approfondimento sui colori}
+
+\subsection{I colori primari}
+
+I colori primari si inseriscono, come visto precedentemente, importando il package
+\begin{verbatim}
+color
+\end{verbatim}
+
+I colori primari sono:
+
+\begin{itemize}
+    \item black
+    \item blue
+    \item brown
+    \item cyan
+    \item darkgray
+    \item gray
+    \item green
+    \item lightgray
+    \item lime
+    \item magenta
+    \item olive
+    \item orange
+    \item pink
+    \item purple
+    \item red
+    \item teal
+    \item violet
+    \item white
+    \item yellow
+\end{itemize}
+
+\subsection{I colori secondari}
+
+Per poter utilizzare i colori secondari occorre importare un package diverso, ovvero:
+
+\begin{verbatim}
+    \usepackage[dvipsnames]{xcolor}
+\end{verbatim}
+
+che comprende colori diversi da quelli visti precedentemente...\\ Per maggiori informazioni consultare \href{https://en.wikibooks.org/wiki/LaTeX/Colors}{questa guida}
+
+\subsubsection{Esempi di colori secondari}
+
+\begin{itemize}
+    \item {\color{SeaGreen}SeaGreen}
+    \item {\color{OrangeRed}OrangeRed}
+    \item {\color{Goldenrod}Goldenrod}
+    \item {\color{RedOrange}RedOrange}
+\end{itemize}
+
+
+
+\section{Headers \& Footers}
+
+\subsection{Headers e Footers personalizzati}
+Gli \textit{headers} sono le intestazioni in testa alla pagina; i \textit{footers} sono le note a piè di pagina.
+
+\subsubsection{Il package}
+Per usarle occorre importare il package
+\begin{verbatim}
+    fancyhdr
+\end{verbatim}
+proprio come è stato fatto in questo documento.\\Tale package impone che il contenuto della pagina dai suddetti elementi venga separato mediante l'utilizzo di una linea.
+
+\subsubsection{Lo stile della pagina}
+Poi occorre impostare lo stile di pagina
+\begin{verbatim}
+    \pagestyle{fancy}
+\end{verbatim}
+
+\subsubsection{I margini della pagina}
+Poi occorre modificare adeguatamente la dimensione dei margini affiché il testo possa antrare nel documento. Ad esempio:
+\begin{verbatim}
+    \geometry{a4paper,top=2cm,bottom=2cm,left=1.5cm,right=1cm,bindingoffset=5mm}
+\end{verbatim}
+
+\subsubsection{Impostare gli header}
+
+Header destro:
+\begin{verbatim}
+    \rhead{Made with \LaTeX\ }
+\end{verbatim}
+
+Header sinistro:
+\begin{verbatim}
+    \lhead{made by Antonio Maulucci}
+\end{verbatim}
+
+\subsubsection{Impostare i footers}
+
+Footer destro:
+\begin{verbatim}
+    \rfoot{This is the page \thepage }
+\end{verbatim}
+
+Footer sinistro:
+\begin{verbatim}
+    \lfoot{Feb 2017}
+\end{verbatim}
+
+
+
+
+
+
+\subsection{Gli stili predefiniti}
+
+Utilizzando lo stile di pagina 
+\begin{verbatim}
+    \pagestyle{headings}
+\end{verbatim}
+le intestazioni vengono inserite in maniera automatica.
+
+\subsection{Altri stili}
+
+Per altri stili consultare la guida \url{https://it.sharelatex.com/learn/Headers_and_footers}
+
+
+
+\vspace{1cm}
+
+\section{La numerazione delle pagine}
+
+È possibile modificare lo stile della numerazione delle pagine.
+
+\subsection{Indice alfanumerico}
+
+Per impostare un indice alfanumerico nella numerazione delle pagine utilizzare il comando
+\begin{verbatim}
+    \pagenumbering{alph}
+\end{verbatim}
+
+\subsection{Indice in numeri Romani minuscoli}
+
+Utilizzare il comando
+\begin{verbatim}
+    \pagenumbering{roman}
+\end{verbatim}
+
+\subsection{Impostare manualmente il numero di pagina}
+
+utilizzare il comando seguente sostituendo il 3 con il valore desiderato
+\begin{verbatim}
+    \setcounter{page}{3}
+\end{verbatim}
+
+Nota Bene: La numerazione delle pagine seguenti continuerà dal numero\\ assegnato a questa pagina
+\\\\
+Nota Bene: Come si può notare è stata saltata la pagina 4 perché è stato impostato\\ manualmente iaffiché questa pagina corrisponda alla numero 5 del documento\\Per fare ioò è stato utilizzato il comando
+\begin{verbatim}
+    \setcounter{page}{5}
+\end{verbatim}
+
+\setcounter{page}{5} %imposto la numerazione di questa pagina in numero 4
+
+
+
+\subsection{Personalizzare l'indice di pagina}
+
+È possibile personalizzare l'indice di pagina sfruttando le peculiarità di \LaTeX\\ mediante alcuni comandi e mediante i footers
+\\\\
+Ad esempio per scrivere pagina x di x nel footer destro della pagina si può utilizzare il comando
+\begin{verbatim}
+    \rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\end{verbatim}
+
+dopo aver importato il package
+\begin{verbatim}
+    \usepackage{lastpage}
+\end{verbatim}
+
+ad esempio questo documnto sta usando il footer
+\begin{verbatim}
+    \rfoot{This is the page \thepage\ of \pageref{LastPage}}
+\end{verbatim}
+
+\subsection{Ulteriori annotazioni}
+
+Per ulteriori annotazioni consultare \href{https://it.sharelatex.com/learn/Headers_and_footers}{questa guida}.
+
+\subsection{Rimuovere il numero di pagina}
+
+Per rimuovere il numero di pagina utilizzare il comando visto precedentemente\\ per impostare manualmente il numero di pagina e settarlo a 0
+\begin{verbatim}
+    \setcounter{page}{0}
+\end{verbatim}
+
+
+\vspace{2cm}
+
+\section{Rimuovere lo stile di una pagina}
+
+Per rimuovere lo stile della pagina corrente, compreso il numero di pagina utilizzare:
+\begin{verbatim}
+    \thispagestyle{empty}
+\end{verbatim}
+
+
+
+
+
+\vspace{4cm}
+\begin{center}
+{\fontfamily{qag}\selectfont
+\copyright \sffamily{Antonio Maulucci 2017}
+}
+\end{center}
+\end{document}
